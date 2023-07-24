@@ -17,12 +17,12 @@ import diffusers
 def pil_to_b64(input):
     buffer = BytesIO()
     input.save( buffer, 'PNG' )
-    output = base64.b16encode( buffer.getvalue() ).decode( 'utf-8' ).replace( '\n', '' )
+    output = base64.b64encode( buffer.getvalue() ).decode( 'utf-8' ).replace( '\n', '' )
     buffer.close()
     return output
 
 def b64_to_pil(input):
-    output = Image.open( BytesIO( base64.b16decode( input ) ) )
+    output = Image.open( BytesIO( base64.b64decode( input ) ) )
     return output
 
 def get_compute_platform(context):
