@@ -119,7 +119,7 @@ manager = EngineManager()
 # Add supported engines to manager:
 manager.add_engine( 'txt2img', EngineStableDiffusion( diffusers.StableDiffusionPipeline,        sibling=None ) )
 
-def _generate(prompt='test', seed=0, count=1, num_inference_steps=50, guidance_scale=7.5, eta=0.0, width=512, height=512, negative_prompt='""'):
+def _generate(prompt, negative_prompt, seed, count, num_inference_steps, guidance_scale, eta, width, height):
     # Retrieve engine:
     task = 'txt2img'
     engine = 'txt2img'
