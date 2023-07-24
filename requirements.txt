@@ -1,0 +1,10 @@
+accelerate
+transformers
+diffusers
+torch
+Pillow
+graypy
+psutil
+prometheus_client
+fastapi
+uvicorn
