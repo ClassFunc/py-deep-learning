@@ -8,5 +8,5 @@ class Text2ImageModels(BaseModel):
     num_inference_steps: int = 50
     guidance_scale: float = 7.5
     eta: float = 0.0
-    height: int = 512
-    width: int = 512
+    height: int = 256
+    width: int = 256
